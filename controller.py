@@ -8,7 +8,7 @@ class LearningSwitch(object):
         self.connection = connection
         self.mac_to_port = {}
         connection.addListeners(self)
-
+        
     def _handle_PacketIn(self, event):
         packet = event.parsed
         in_port = event.port
